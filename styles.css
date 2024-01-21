@@ -1,80 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+
+header{
+  font-size: 20px;
+  text-align: center;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.nav {
+  overflow: hidden;
+  background-color: #3a3a3a;
+}
+
+.nav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background-color: #ddd;
+  color: black;
+  cursor: not-allowed;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #292929;
+  color: white;
+  margin-top: 20px;
+}
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f2f2f2;
+  padding-left: 20px;
+}
+
+.card {
+  background-color: #eeeded;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1000px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
-    margin-left: 25%;
-    margin-right: 25%;
   }
-  section {
-    padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
   }
+}
 
-  h2 {
-    color: #333;
-  }
-
-  p {
-    line-height: 1.6;
-    color: #666;
-  }
-
-  .about-me {
-    background-color: #fff;
-  }
-
-  .skills {
-    background-color: #f9f9f9;
-  }
-
-  .projects {
-    background-color: #fff;
-  }
-
-  .contact {
-    background-color: #f9f9f9;
-  }
-
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-  }
-
-  ul {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 10px;
-  }
-
-  li {
-    text-align: center;
-  }
-
-  img {
-    width: 100%; /* Set the width to 100% of the parent container */
-    height: 100%; /* Set the height to 100% of the parent container */
-    object-fit: cover;
-  }
-
-  * {box-sizing:border-box}
-
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -90,18 +108,15 @@ body {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -112,7 +127,6 @@ body {
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -121,7 +135,6 @@ body {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -137,7 +150,6 @@ body {
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -152,23 +164,87 @@ body {
   border: solid 2mm
 }
 
-.Description{
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+img{
+  max-width: 100%;
+  height: auto;
 }
 
 .Image{
-  border-style: solid;
-  max-width: 40%;
-  background-attachment: fixed;
-  max-height: 5%;
+  padding-top: 20px;
 }
 
-h1{
-  font-size: 30px;
+ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  object-fit: contain;
+  width: 100%;
+  max-height: 100%;
+  gap: 10px;
 }
 
-.mainText{
-  max-width: 50%;
+li img {
+  text-align: center;
+}
+
+ol li{
+  padding: 0px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1700px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }

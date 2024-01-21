@@ -7,85 +7,136 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
 </head>
-<body>
-  <section class="Description">
-    <div class="mainText">
-      <h1>Hello there.<br> I am Kamen.</h1>
-      <p><strong>I'm a system programmer. I am currently studying in TUES and working as a Junior Embedded Engineer at AmperNext.</strong></p>
-    </div>
+<body onload="currentSlide(1)">
+  <header>
+    <h1>Kamen Koshutanski</h1>
+  </header>
 
-    <div class="Image">
-      <img src="static/selfPhoto.jpg" alt="Self Photo">
-    </div>
-  </section>
+  <div class="nav">
+    <a href="#">About</a>
+    <a href="#">Tech Stack</a>
+    <a href="#">Projects</a>
+    <a href="#" style="float:right">Contact</a>
+  </div>
 
-  <section class="techStack">
-    <h2>Tech stack</h2>
-    <ul>
-      <li><img src="static/stack/HTML5.png" alt="HTML"></li>
-      <li><img src="static/stack/CSS.png" alt="CSS"></li>
-      <li><img src="static/stack/JavaScript.png" alt="JS"></li>
-      <li><img src="static/stack/Docker.png" alt="Docker"></li>
-      <li><img src="static/stack/C.png" alt="C"></li>
-      <li><img src="static/stack/C++.png" alt="C++"></li>
-      <li><img src="static/stack/C++++.png" alt="C#"></li>
-      <li><img src="static/stack/Java.png" alt="Java"></li>
-      <li><img src="static/stack/Python.png" alt="Python"></li>
-      <li><img src="static/stack/Raspberry.png" alt="Raspberry"></li>
-      <li><img src="static/stack/Arduino.png" alt="Arduino"></li>
-      <li><img src="static/stack/arm.png" alt="Arm"></li>
-    </ul>
-  </section>
-
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="slideshow-container">
-
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <a href="https://github.com/KamenKoshutanski/Task-Management-System"><img src="static\projects\taskManagementSystem.png" alt="Task Management System" style="width:100%"></a>
-        <div class="text" style="color:black">Task Management System</div>
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2>About me</h2>
+        <p>Hello there, I am Kamen Koshutanski.</p>
+        <p>I currently work as a Junior Embedded Engineer at Ampernext and have knowledge in many aspects of the software industry.</p>
       </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <a href="https://github.com/KamenKoshutanski/ExoGrip"><img src="static\projects\ExoGrip.jpg" alt="Exo Grip" style="width:100%"></a>
-        <div class="text">Exo Grip</div>
+      <div class="card">
+        <section class="techStack">
+          <h2>Tech stack</h2>
+          <ul>
+            <li><img src="static/stack/HTML5.png" alt="HTML"></li>
+            <li><img src="static/stack/CSS.png" alt="CSS"></li>
+            <li><img src="static/stack/JavaScript.png" alt="JS"></li>
+            <li><img src="static/stack/Docker.png" alt="Docker"></li>
+            <li><img src="static/stack/C.png" alt="C"></li>
+            <li><img src="static/stack/C++.png" alt="C++"></li>
+            <li><img src="static/stack/C++++.png" alt="C#"></li>
+            <li><img src="static/stack/Java.png" alt="Java"></li>
+            <li><img src="static/stack/Python.png" alt="Python"></li>
+            <li><img src="static/stack/Raspberry.png" alt="Raspberry"></li>
+            <li><img src="static/stack/Arduino.png" alt="Arduino"></li>
+            <li><img src="static/stack/arm.png" alt="Arm"></li>
+          </ul>
       </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <a href="https://github.com/KamenKoshutanski/Python-Console-Game"><img src="static\projects\pygame.png" alt="pygame" style="width:100%"></a>
-        <div class="text">Python Console game</div>
+      <div class="card">
+        <section class="projects">
+          <h2>Projects</h2>
+          <div class="slideshow-container">
+      
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <a href="https://github.com/KamenKoshutanski/Task-Management-System"><img src="static\projects\taskManagementSystem.png" alt="Task Management System" style="width:100%"></a>
+              <div class="text" style="color:black">Task Management System</div>
+            </div>
+      
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <a href="https://github.com/KamenKoshutanski/ExoGrip"><img src="static\projects\ExoGrip.jpg" alt="Exo Grip" style="width:100%"></a>
+              <div class="text">Exo Grip</div>
+            </div>
+      
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <a href="https://github.com/KamenKoshutanski/Python-Console-Game"><img src="static\projects\pygame.png" alt="pygame" style="width:100%"></a>
+              <div class="text">Python Console game</div>
+            </div>
+      
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+      
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </section>
       </div>
-
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <br>
-
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
+    <div class="rightcolumn">
+        <div class="Image" >
+          <img src="static/selfPhoto.jpg" alt="Self Photo">
+        </div>
+      <div class="card">
+        <h3>Interesting facts about me</h3>
+        <ol>
+          <li>I am obsessed with Vesko Marinov's music!</li>
+          <li>I am slightly autistic!</li>
+          <li>I have severe dementia!</li>
+        </ul>
+      </div>
+      <div class="card">
+        <section class="contact">
+          <h2>Contact</h2>
+          <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">First Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Last Name</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="email">Email</label>
+              </div>
+              <div class="col-75">
+                <input type="email" id="email" name="email" placeholder="Your email..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Subject</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+            </form>
+        </section>
+      </div>
     </div>
-  </section>
-
-  <section class="contact">
-    <h2>Contact</h2>
-    <form>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+  </div>
 
   <footer>
     &copy; 2024 Kamen Koshutanski
