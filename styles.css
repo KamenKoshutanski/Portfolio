@@ -161,17 +161,31 @@ footer {
 }
 
 .slideshow-container{
-  border: solid 2mm
+  border: solid 2mm;
+  line-height: 0;
 }
 
 img{
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .Image{
-  padding-top: 20px;
+  margin-top: 20px;
+  border: solid;
+  line-height: 0;
 }
+
+.Change img:last-child {
+  display: none;  
+}
+.Change:hover img:last-child {
+  display: block;  
+}
+.Change:hover img:first-child {
+  display: none;  
+}
+
 
 ul {
   list-style: none;
@@ -185,6 +199,14 @@ ul {
 
 li img {
   text-align: center;
+}
+
+li img:hover {
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mySlides:hover {
+  box-shadow: 0 30px 30px 0 rgba(3, 41, 255, 0.2), 0 6px 20px 0 rgba(3, 41, 255, 0.19);
 }
 
 ol li{
@@ -234,12 +256,6 @@ input[type=submit]:hover {
   float: left;
   width: 75%;
   margin-top: 6px;
-}
-
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 @media screen and (max-width: 1700px) {
